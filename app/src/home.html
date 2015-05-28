@@ -1,0 +1,53 @@
+
+<div class="jumbotron">
+  	<div class="jumbotron-photo"><img src="./resources/img/shinkai.jpg"/></div>
+  	<div class="jumbotron-contents">
+    	<h1>ANIME DATABASE</h1>
+    	<h2>powered by Anime News Network </h2>        	
+		<p> 
+			This website allow you to retrieve animes information from Anime News Network API.<br/>
+			You can start by clicking the button below !
+		</p>
+
+		<a href="#/list" role="button" class="btn btn-primary">Get started now</a>
+	</div>
+</div>
+
+<div class="row">
+	<!-- First column -->	
+	<div class="col-md-4">
+		<h3> Technology : </h3>
+		<p> This a simple project is using <br/>
+			<ul>
+				<li> AngularJS for databinding and presentation </li>
+				<li> Bootstrap & Bootflat for styling and templating </li>
+				<li> Firebase for storing data</li>
+			</ul>
+		</p>
+		<p> Developement environment : </p>
+			<ul> 
+				<li> SublimeText3 for writing code (duh) </li>
+				<li> NodeJS for local test </li>
+				<li> Firebase hosting for online hosting </li>
+			</ul>			
+	</div>
+
+	<!-- Second column -->
+	<div class="col-md-4">
+		<h3> Display anime list</h3>
+		<p> 
+			This project retrieve a list of anime stored in an online Firebase.
+			To initialize the data in Firebase, we used a report from Anime News Network.
+			Firebase allow you to import JSON object into the database.
+			But, Anime News Network gives you an report in XML Format.
+			So we made a JAVA project to convert XMl to JSON. This project will be available on GITHUB later.			
+		</p>
+		<a href="#/list" role="button" class="btn btn-primary">Live Demo</a>		
+	</div>
+
+	<!-- Third column -->	
+	<div class="col-md-4">
+		<h3> View anime detail </h3>
+		<p> not yet implemented ! </p>
+	</div>
+</div>

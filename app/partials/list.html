@@ -1,0 +1,51 @@
+<!--Panel for displaying List -->
+	
+	<!-- Div for choosing number of items to display -->
+	
+	<div class="row">
+		<div class="col-md-3 col-md-offset-9 text-right">
+			<div class="form-group">
+				<input type="number" ng-model="searchParameter.limit" ng-change="getAnimes()">
+			</div>
+		</div>
+	</div>
+	
+
+	<table class="table table-striped table-bordered">
+		<thead>
+			<tr>
+				<th> Id </th>
+				<th> Type </th>
+				<th> Name </th>
+				<th> Date </th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat="anime in animes | orderBy: 'name'">
+				<td>
+					<div><a href="#/detail/{{anime.id}}"> {{anime.id}} </a></div>
+				</td>
+				<td>
+					<div> {{anime.type}}</div>
+				</td>
+				<td>
+					<div> {{anime.name}}</div>
+				</td>
+				<td>
+					<div> {{anime.vintage}}</div>
+				</td>
+				
+			</tr>
+
+		</tbody>
+	</table>
+
+	<!-- Div for table navigation button -->
+	<div class="row">
+		<div class="col-md-2">
+			<button class="btn btn-primary" ng-click="previousPage()" ng-disabled="isStart()">Previous</button>
+		</div>
+		<div class="col-md-2 col-md-offset-8 text-right">
+			<button class="btn btn-primary" ng-click="nextPage()">Next</button>
+		</div>		
+	</div>

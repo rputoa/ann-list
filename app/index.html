@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+  <title>Anime Listing powered by Anime News Network</title>
+  
+  <!--Bootstrap -->
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="./resources/bower_components/bootstrap/dist/css/bootstrap.min.css">
+  <!-- Bootflat -->
+  <link rel="stylesheet" href="https://bootflat.github.io/bootflat/css/bootflat.css">
+  <!-- CSS -->
+  <link rel="stylesheet" href="./resources/css/app.css"/>
+</head>
+
+<body ng-app="app">
+  <!-- Navigation bar -->
+  <div ng-include='"./src/template/navigation.html"'></div>
+ 
+  <!-- Main content, changes based on $route -->
+  <div class="wrapper">
+    <div ui-view class="container-fluid"></div>
+    <div class="push"></div>
+  </div>
+  <!-- Footer -->
+  <div ng-include='"./src/template/footer.html"' class="footer"></div>
+
+  <!-- Bootstrap --> 
+   <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script src="./resources/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+
+  <!-- Bootflat's JS files.-->
+  <script src="https://bootflat.github.io/bootflat/js/icheck.min.js"></script>
+  <script src="https://bootflat.github.io/bootflat/js/jquery.fs.selecter.min.js"></script>
+  <script src="https://bootflat.github.io/bootflat/js/jquery.fs.stepper.min.js"></script>
+
+  <!-- XML to JSON Converter -->
+  <script src="./resources/bower_components/x2js/xml2json.min.js"></script>
+
+  <!--Angular JS -->
+  <script src="./resources/bower_components/angular/angular.js"></script>
+  <!-- Ui-router -->
+  <script src="./resources/bower_components/ui-router/release/angular-ui-router.js"></script>
+   
+  <!-- Custom Javascript -->
+  <!-- animeList Module -->  
+  <script type="text/javascript" src="./src/animeList/animeList.js"></script>
+  <script type="text/javascript" src="./src/animeList/animeListService.js"></script>
+  <script type="text/javascript" src="./src/animeList/animeListController.js"></script>
+
+  <!-- App Module -->
+  <script type="text/javascript" src="./src/app-modules.js"></script>
+  <script type="text/javascript" src="./src/app-routes.js"></script>
+ 
+</body>
+</html>

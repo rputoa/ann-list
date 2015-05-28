@@ -1,0 +1,66 @@
+<!--Panel for displaying List -->
+	
+	<!-- Div for choosing number of items to display -->
+	<div class="col-md-3 col-md-offset-9 col-sm-6 col-sm-offset-6 col-xs-8 col-xs-offset-4">
+		<div class="panel panel-primary ">
+			<div class="panel-heading">
+				Search Parameter
+			</div>
+			<div class="panel-body">
+				<!-- Search for specific anime -->			
+				<div class="form-horizontal">
+					<div class="form-group text-right">
+						<label for="inputLimit" class="col-xs-6 control-label"> Search by Name </label>
+						<div class="col-xs-6">
+							<input type="text" class="form-control" id="inputLimit" ng-model="animeListController.searchParameter.name" ng-model-options="{debounce : 1500}" ng-change="animeListController.getAnimeList()">
+						</div>
+					</div>
+					<div class="form-group text-right">
+						<label for="inputLimit" class="col-xs-6 control-label"> Number of Result </label>
+						<div class="col-xs-6">
+							<input type="number" class="form-control" id="inputLimit" ng-model="animeListController.searchParameter.limit" ng-model-options="{debounce : 500}" ng-change="animeListController.getAnimeList()">
+						</div>
+					</div>
+				</div>			
+			</div>
+		</div>	
+	</div>	
+
+	<table class="table table-striped table-bordered">
+		<thead>
+			<tr>
+				<th> Id </th>
+				<th> Type </th>
+				<th> Name </th>
+				<th> Date </th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat="anime in animeListController.animes | orderBy: 'name'">
+				<td>
+					<div><a href="http://www.animenewsnetwork.com/encyclopedia/anime.php?id={{anime.id}}" target="_blank"> {{anime.id}} </a></div>
+				</td>
+				<td>
+					<div> {{anime.type}}</div>
+				</td>
+				<td>
+					<div> {{anime.name}}</div>
+				</td>
+				<td>
+					<div> {{anime.date}}</div>
+				</td>
+				
+			</tr>
+
+		</tbody>
+	</table>
+
+	<!-- Div for table navigation button -->
+	<div class="row">
+		<div class="col-md-4 col-md-offset-8 text-right">
+			<button class="btn btn-primary" 
+				ng-click="animeListController.previousPage()" 
+				ng-disabled="animeListController.isStart()">Previous</button>
+			<button class="btn btn-primary" ng-click="animeListController.nextPage()">Next</button>
+		</div>		
+	</div>

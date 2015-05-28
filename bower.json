@@ -1,0 +1,17 @@
+{
+  "name": "ann-list",
+  "description": "A starter project for AngularJS",
+  "version": "0.0.0",
+  "homepage": "https://github.com/angular/angular-seed",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "angular": "~1.4.0",
+    "ui-router": "~0.2.15",
+    "bootstrap": "~3.3.4",
+    "x2js": "~1.1.7"
+  },
+  "resolutions": {
+    "angular": "~1.4.0"
+  }
+}

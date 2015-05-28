@@ -1,0 +1,9 @@
+{
+  "firebase": "ann-list",
+  "public": "app",
+  "ignore": [
+    "firebase.json",
+    "**/.*",
+    "**/node_modules/**"
+  ]
+}
