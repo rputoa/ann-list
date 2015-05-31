@@ -8,8 +8,8 @@
   "dependencies": {
     "angular": "~1.4.0",
     "ui-router": "~0.2.15",
-    "bootstrap": "~3.3.4",
-    "x2js": "~1.1.7"
+    "x2js": "~1.1.7",
+    "angular-material": "~0.9.6"
   },
   "resolutions": {
     "angular": "~1.4.0"

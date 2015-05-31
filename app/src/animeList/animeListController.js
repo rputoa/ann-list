@@ -19,14 +19,14 @@
         self.searchParameter = {
             start : 0,
             limit : 20,
-            name : null
+            name : ""
         };
-        self.animes = animeListInit.animes; 
-        console.log("Animes",self.animes);     
+        self.animes = animeListInit.animes;             
         self.getAnimeList = getAnimeList;
         self.nextPage = nextPage;
         self.previousPage = previousPage;
         self.isStart = isStart;
+        self.searchParameterNameChange = searchParameterNameChange;
 
         // Functions
         function getAnimeList() {
@@ -53,6 +53,11 @@
 
         function isStart() {
             return self.searchParameter.start === 0;
+        }
+
+        function searchParameterNameChange() {
+            self.searchParameter.start = 0;
+            getAnimeList();
         }
         
     }
