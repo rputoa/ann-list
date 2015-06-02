@@ -12,7 +12,7 @@
 					<div class="form-group text-right">
 						<label for="inputLimit" class="col-xs-6 control-label"> Search by Name </label>
 						<div class="col-xs-6">
-							<input type="text" class="form-control" id="inputLimit" ng-model="animeListController.searchParameter.name" ng-model-options="{debounce : 1500}" ng-change="animeListController.getAnimeList()">
+							<input type="text" class="form-control" id="inputLimit" ng-model="animeListController.searchParameter.name" ng-model-options="{debounce : 1000}" ng-change="animeListController.onNameChange()">
 						</div>
 					</div>
 					<div class="form-group text-right">
