@@ -35,7 +35,7 @@
     * @returns {unresolved}
     */
     function resolverAnimeListInit(animeListService) {
-        return animeListService.getAnimeList(0, 20, null);
+        return animeListService.getAnimeList(0, 5, null);
     }
 
 })();

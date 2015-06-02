@@ -16,14 +16,14 @@
   <link rel="stylesheet" href="./resources/css/app.css"/>
 </head>
 
-<body ng-app="app" layout="column">
+<body ng-app="app" layout="column" layout-margin>
   <!-- Navigation bar -->
-  <header ng-include='"./src/template/navigation.html"' flex="10" layout-margin ></header>
+  <header ng-include='"./src/template/navigation.html"' flex="10"></header>
  
   <!-- Main content, changes based on $route --> 
   <section ui-view layout="column" layout-margin></section>    
   <!-- Footer -->
-  <footer ng-include='"./src/template/footer.html"' flex="10" layout="row" layout-margin ></footer>
+  <footer ng-include='"./src/template/footer.html"' flex="10" layout="row"></footer>
 
   <!-- Bootstrap --> 
   <!-- XML to JSON Converter -->
@@ -39,6 +39,8 @@
   <script src="./resources/bower_components/ui-router/release/angular-ui-router.js"></script>
    
   <!-- Custom Javascript -->
+  <!-- Model -->
+  <script type="text/javascript" src="./src/common/model.js"></script>
   <!-- animeList Module -->  
   <script type="text/javascript" src="./src/animeList/animeList.js"></script>
   <script type="text/javascript" src="./src/animeList/animeListService.js"></script>

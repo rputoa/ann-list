@@ -23,17 +23,15 @@
 
             return service;
 
-            /////////// Functions
-
             /* Return animeList from Anime News Network */
             function getAnimeList(start, limit, name) {                
                 var urlAdress = getUrlAdressWithParam(start, limit, name);
                 // Call ANN API
-                var promise = $http.get(urlAdress).then(function(response) {                    
+                var promise = $http.get(urlAdress).then(function(response) {      
+                    console.log("Loging response : ", response);              
                     return response.data;
                 });
 
-                console.log(promise);
                 return promise;
             }; 
 

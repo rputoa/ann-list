@@ -7,9 +7,9 @@
   "private": true,
   "dependencies": {
     "angular": "~1.4.0",
+    "angular-material": "~0.9.6",
     "ui-router": "~0.2.15",
-    "x2js": "~1.1.7",
-    "angular-material": "~0.9.6"
+    "x2js": "~1.1.7"
   },
   "resolutions": {
     "angular": "~1.4.0"

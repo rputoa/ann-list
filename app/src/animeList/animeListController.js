@@ -18,10 +18,10 @@
         // Search parameter 
         self.searchParameter = {
             start : 0,
-            limit : 20,
-            name : ""
+            limit : 5,
+            name : null
         };
-        self.animes = animeListInit.animes;             
+        self.animes = animeListInit;             
         self.getAnimeList = getAnimeList;
         self.nextPage = nextPage;
         self.previousPage = previousPage;
@@ -32,7 +32,7 @@
         function getAnimeList() {
             var data = animeListService.getAnimeList(self.searchParameter.start, self.searchParameter.limit, self.searchParameter.name).then(function(response){  
                 console.log("Logging in data :", response);      
-                self.animes = response.animes;           
+                self.animes = response;           
             });            
         }
 
@@ -59,7 +59,7 @@
             self.searchParameter.start = 0;
             getAnimeList();
         }
-        
+
     }
 })();
 
