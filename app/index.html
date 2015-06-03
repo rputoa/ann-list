@@ -2,19 +2,16 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="icon" href="../../favicon.ico">
-
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <script src="bower_components/modernizr/modernizr.js"></script>
   <title>Anime Listing powered by Anime News Network</title>
   
-  <!--Bootstrap -->
-  <!-- Latest compiled and minified CSS -->
-  <link rel="stylesheet" href="./resources/bower_components/bootstrap/dist/css/bootstrap.min.css">
-  <!-- Bootflat -->
-  <link rel="stylesheet" href="https://bootflat.github.io/bootflat/css/bootflat.css">
+  <!--Foundation -->
+  <link rel="stylesheet" href="./resources/bower_components/foundation/css/foundation.css"/>
+  <link rel="stylesheet" href="./resources/bower_components/foundation/css/normalize.css"/>
   <!-- CSS -->
   <link rel="stylesheet" href="./resources/css/app.css"/>
 </head>
@@ -25,21 +22,17 @@
  
   <!-- Main content, changes based on $route -->
   <div class="wrapper">
-    <div ui-view class="container-fluid"></div>
-    <div class="push"></div>
+    <div ui-view></div>
   </div>
   <!-- Footer -->
   <div ng-include='"./src/template/footer.html"' class="footer"></div>
 
-  <!-- Bootstrap --> 
+  <!-- foundation --> 
    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-  <script src="./resources/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-
-  <!-- Bootflat's JS files.-->
-  <script src="https://bootflat.github.io/bootflat/js/icheck.min.js"></script>
-  <script src="https://bootflat.github.io/bootflat/js/jquery.fs.selecter.min.js"></script>
-  <script src="https://bootflat.github.io/bootflat/js/jquery.fs.stepper.min.js"></script>
+  <script src="./resources/bower_components/foundation/js/vendor/fastclick.js"></script>
+  <script src="./resources/bower_components/foundation/js/foundation.min.js"></script>
+  <script> $(document).foundation(); </script>
 
   <!-- XML to JSON Converter -->
   <script src="./resources/bower_components/x2js/xml2json.min.js"></script>
