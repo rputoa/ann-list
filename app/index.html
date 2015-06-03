@@ -6,37 +6,37 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="">
   <meta name="author" content="">
-  <script src="bower_components/modernizr/modernizr.js"></script>
+  <script src="./resources/bower_components/modernizr/modernizr.js"></script>
   <title>Anime Listing powered by Anime News Network</title>
   
   <!--Foundation -->
   <link rel="stylesheet" href="./resources/bower_components/foundation/css/foundation.css"/>
   <link rel="stylesheet" href="./resources/bower_components/foundation/css/normalize.css"/>
   <!-- CSS -->
+  <link rel="stylesheet" href="./resources/css/layout.css"/>
+  <link rel="stylesheet" href="./resources/css/table.css"/>
   <link rel="stylesheet" href="./resources/css/app.css"/>
 </head>
 
 <body ng-app="app">
   <!-- Navigation bar -->
-  <div ng-include='"./src/template/navigation.html"'></div>
+  <header foundation-nav-bar></header>
  
   <!-- Main content, changes based on $route -->
   <div class="wrapper">
-    <div ui-view></div>
+    <div ui-view class="row"></div>
   </div>
   <!-- Footer -->
-  <div ng-include='"./src/template/footer.html"' class="footer"></div>
+  <footer foundation-footer></footer>
 
   <!-- foundation --> 
-   <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script src="./resources/bower_components/foundation/js/vendor/jquery.js"></script>
   <script src="./resources/bower_components/foundation/js/vendor/fastclick.js"></script>
   <script src="./resources/bower_components/foundation/js/foundation.min.js"></script>
   <script> $(document).foundation(); </script>
 
   <!-- XML to JSON Converter -->
   <script src="./resources/bower_components/x2js/xml2json.min.js"></script>
-
   <!--Angular JS -->
   <script src="./resources/bower_components/angular/angular.js"></script>
   <!-- Ui-router -->
@@ -51,6 +51,7 @@
   <!-- App Module -->
   <script type="text/javascript" src="./src/app-modules.js"></script>
   <script type="text/javascript" src="./src/app-routes.js"></script>
+  <script type="text/javascript" src="./src/common/directive.js"></script>
  
 </body>
 </html>

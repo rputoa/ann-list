@@ -10,5 +10,7 @@
         - ngMaterial : Angular Design Material
         - menu : Module used for sideBar Menu
          */
-        .module('app',['ui.router','animeList']);       
+        .module('app',['ui.router','animeList']);
+
+
 })();
