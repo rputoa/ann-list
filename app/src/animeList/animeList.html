@@ -1,8 +1,8 @@
 <!--Panel for displaying List -->
 	
 <!-- Div for choosing number of items to display -->
-<div layout="row" layout-align="end center" layout-fill>
-	<md-whiteframe class="md-whiteframe-z2" flex="40" flex-sm="60" flex-md="60">
+<div layout="row" layout-align="end center" flex="15">
+	<md-whiteframe class="md-whiteframe-z2" flex="40" flex-sm flex-md="60">
 		<md-subheader class="md-primary">
 			Search Parameters
 		</md-subheader>
@@ -21,8 +21,9 @@
 	</md-whiteframe>
 </div>	
 
-<md-whiteframe class="md-whiteframe-z2" layout="column" layout-padding >
-	<md-content>
+
+<md-whiteframe class="md-whiteframe-z2" layout="column">
+	<md-content layout-fill>
 		<md-list>
 			<md-subheader class="md-no-sticky">Search result</md-subheader>
 			<md-divider></md-divider>
@@ -42,7 +43,7 @@
 	</md-content>
 
 	<!-- Div for table navigation button -->
-	<div flex layout="row" layout-align="end center">		
+	<div layout layout-align="end center">		
 		<md-button class="md-raised" 
 			ng-click="animeListController.previousPage()" 
 			ng-disabled="animeListController.isStart()">Previous</md-button>

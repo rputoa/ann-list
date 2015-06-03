@@ -18,12 +18,12 @@
 
 <body ng-app="app" layout="column" layout-margin>
   <!-- Navigation bar -->
-  <header ng-include='"./src/template/navigation.html"' flex="10"></header>
+  <header header-bar flex="10"></header>
  
   <!-- Main content, changes based on $route --> 
   <section ui-view layout="column" layout-margin></section>    
   <!-- Footer -->
-  <footer ng-include='"./src/template/footer.html"' flex="10" layout="row"></footer>
+  <footer footer-bar flex="10" layout="row"></footer>
 
   <!-- Bootstrap --> 
   <!-- XML to JSON Converter -->
@@ -50,9 +50,10 @@
   <script type="text/javascript" src="./src/animeDetail/animeDetail.js"></script>
   <script type="text/javascript" src="./src/animeDetail/animeDetailController.js"></script>
 
-  <!-- App Module -->
+  <!-- App Module -->  
   <script type="text/javascript" src="./src/app-modules.js"></script>
   <script type="text/javascript" src="./src/app-routes.js"></script>
+   <script type="text/javascript" src="./src/common/directive.js"></script>
  
 </body>
 </html>

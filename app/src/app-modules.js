@@ -10,5 +10,18 @@
         - ngMaterial : Angular Design Material
         - menu : Module used for sideBar Menu
          */
-        .module('app',['ngMaterial','ui.router','animeList','animeDetail']);       
+        .module('app',['ngMaterial','ui.router','animeList','animeDetail'])
+        /*
+        Configuring color palette
+        */
+        .config(configTheme);
+
+
+    function configTheme($mdThemingProvider) {
+    	$mdThemingProvider.theme('default')
+    		.primaryPalette('blue', {
+    			'hue-1' : '500'
+    		});
+    };
+
 })();
