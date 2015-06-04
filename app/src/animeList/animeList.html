@@ -1,8 +1,9 @@
 <!--Panel for displaying List -->
 	
 <!-- Div for choosing number of items to display -->
-<div layout="row" layout-align="end center" flex="15">
-	<md-whiteframe class="md-whiteframe-z2" flex="40" flex-sm flex-md="60">
+
+<div layout layout-align="end center" flex="15">
+	<md-whiteframe class="md-whiteframe-z2" flex-sm flex-gt-sm="60" layout-margin>
 		<md-subheader class="md-primary">
 			Search Parameters
 		</md-subheader>
@@ -19,35 +20,36 @@
 			</md-input-container>			
 		</div>	
 	</md-whiteframe>
-</div>	
+</div>
 
-
-<md-whiteframe class="md-whiteframe-z2" layout="column">
-	<md-content layout-fill>
+<md-content flex layout-wrap>
+	<md-whiteframe class="md-whiteframe-z2" layout="column">
+	
 		<md-list>
 			<md-subheader class="md-no-sticky">Search result</md-subheader>
 			<md-divider></md-divider>
 			<md-list-item>				
-				<div flex="70"> Name </div>
-				<div flex="15"> Type </div>
-				<div flex="15"> Date </div>
+				<div flex-gt-sm="70" flex-sm="75"> Name </div>
+				<div flex-gt-sm="15" hide-sm> Type </div>
+				<div flex-gt-sm="15" flex-sm="15"> Date </div>
 				<md-divider></md-divider>
 			</md-list-item>
 			<md-list-item ng-repeat="anime in animeListController.animes">
-				<div flex="70"> <a href="http://www.animenewsnetwork.com/encyclopedia/anime.php?id={{anime.id}}" target="_blank">{{anime.name}}</a> </div>
-				<div flex="15"> {{anime.type}} </div>
-				<div flex="15"> {{anime.date}} </div>
+				<div flex-gt-sm="70" flex-sm="75"> <a href="http://www.animenewsnetwork.com/encyclopedia/anime.php?id={{anime.id}}" target="_blank">{{anime.name}}</a> </div>
+				<div flex-gt-sm="15" hide-sm> {{anime.type}} </div>
+				<div flex-gt-sm="15" flex-sm="15"> {{anime.date}} </div>
 				<md-divider></md-divider>
 			</md-list-item>
 		</md-list>			
-	</md-content>
+	
 
 	<!-- Div for table navigation button -->
-	<div layout layout-align="end center">		
+	<div layout layout-align="end center" flex>		
 		<md-button class="md-raised" 
 			ng-click="animeListController.previousPage()" 
 			ng-disabled="animeListController.isStart()">Previous</md-button>
 		<md-button class="md-raised" ng-click="animeListController.nextPage()">Next</md-button>		
 	</div>
 
-</md-whiteframe>
+	</md-whiteframe>
+</md-content>

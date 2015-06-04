@@ -22,6 +22,6 @@
     		.primaryPalette('blue', {
     			'hue-1' : '500'
     		});
-    };
+    }
 
 })();

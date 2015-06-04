@@ -20,7 +20,7 @@
                 el.replaceWith(el.children());
             }
         };        
-    };
+    }
 
     /** Directive for nav bar */
     function headerBar() {
@@ -28,7 +28,7 @@
             restric : 'A',
             templateUrl : 'src/template/navigation.html'
         };
-    };
+    }
 
     /** Direcive for footer area */
     function footerBar() {
@@ -36,7 +36,7 @@
             restrict : 'A',
             templateUrl : 'src/template/footer.html'             
         };
-    };
+    }
 
 })();
 

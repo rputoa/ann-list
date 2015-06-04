@@ -1,21 +1,33 @@
-
-<div class="jumbotron">
-  	<div class="jumbotron-photo"><img src="./resources/img/shinkai.jpg"/></div>
-  	<div class="jumbotron-contents">
-    	<h1>ANIME DATABASE</h1>
-    	<h2>powered by Anime News Network </h2>        	
+<!-- Affichage full desktop -->
+<md-card hide-sm>
+  	<img src="./resources/img/shinkai.jpg" class="md-card-image" alt="shinkai">
+  	<md-content layout-padding>  	
+    	<h2 class="md-title">ANIME DATABASE</h2>
+    	powered by Anime News Network       	
 		<p> 
 			This website allow you to retrieve animes information from Anime News Network API.<br/>
 			You can start by clicking the button below !
-		</p>
+		</p>		
+	</md-content>
+	<div layout layout-align="end center">
+		<md-button class="md-primary" ui-sref="list" aria-label="Get started">Get started now</md-button>
+	</div>
+</md-card>
 
-		<a href="#/list" role="button" class="btn btn-primary">Get started now</a>
+<!-- Afficahge mobile -->
+<div class="md-whiteframe-z4" flex="20" layout-padding layout-margin hide-gt-sm>  	
+	<md-subheader>ANN LIST powered by ANN API</md-subheader>
+	<p><small> Retrieve animes informations from Anime News Network API </small></p>
+	<div layout layout-align="end center">
+		<md-button class="md-primary" ui-sref="list" aria-label="Get started">Get started now</md-button>
 	</div>
 </div>
 
-<div class="row">
+
+<md-content class="md-whiteframe-z4" layout-margin layout-padding>
+	<div layout-gt-sm layout-sm="column" flex>
 	<!-- First column -->	
-	<div class="col-md-4">
+	<div flex-gt-sm="33">
 		<h3> Technology : </h3>
 		<p> This a simple project is using <br/>
 			<ul>
@@ -24,7 +36,7 @@
 				<li> Firebase for storing data</li>
 			</ul>
 		</p>
-		<p> Developement environment : </p>
+		<p> Developpement environment : </p>
 			<ul> 
 				<li> SublimeText3 for writing code (duh) </li>
 				<li> NodeJS for local test </li>
@@ -33,7 +45,7 @@
 	</div>
 
 	<!-- Second column -->
-	<div class="col-md-4">
+	<div flex-gt-sm="33">
 		<h3> Display anime list</h3>
 		<p> 
 			This project retrieve a list of anime stored in an online Firebase.
@@ -42,12 +54,12 @@
 			But, Anime News Network gives you an report in XML Format.
 			So we made a JAVA project to convert XMl to JSON. This project will be available on GITHUB later.			
 		</p>
-		<a href="#/list" role="button" class="btn btn-primary">Live Demo</a>		
+		<md-button class="md-primary" ui-sref="list" aria-label="Live Demo">Live Demo</md>		
 	</div>
 
 	<!-- Third column -->	
-	<div class="col-md-4">
+	<div flex-gt-sm="33">
 		<h3> View anime detail </h3>
 		<p> not yet implemented ! </p>
 	</div>
-</div>
+</md-content>

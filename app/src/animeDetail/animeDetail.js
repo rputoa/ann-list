@@ -23,6 +23,6 @@
                 templateUrl: "src/animeDetail/animeDetail.html",
                 controller : "animeDetailController",
                 controllerAs : "animeDetailController"               
-            })
-    };
+            });
+    }
 })();

@@ -33,7 +33,7 @@
                 });
 
                 return promise;
-            }; 
+            }
 
             function getUrlAdressWithParam(start, limit, name) {
                 var startParam = "&start=";

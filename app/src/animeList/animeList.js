@@ -7,7 +7,7 @@
     // Prepare the 'animeList' module for subsequent registration of controllers and delegates
     angular
         .module('animeList', ['ui.router'])
-        .config(animeListRoute)
+        .config(animeListRoute);
 
     // Injection
     animeListRoute.$inject = ["$stateProvider"];
@@ -26,8 +26,8 @@
                 resolve: {
                     'animeListInit' : ['animeListService', resolverAnimeListInit]
                 }
-            })
-    };
+            });
+    }
 
     /**
     * This method return an list of anime 
